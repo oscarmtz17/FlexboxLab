@@ -1,0 +1,120 @@
+/* styles.css */
+
+
+/* Reset default margin and padding for all elements */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Apply Flexbox to header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+
+/* Apply Flexbox to navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #444;
+    padding: 0.5rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* Apply Flexbox to main content and sidebar */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows elements to wrap to a new line when there's not enough space */
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 1rem;
+}
+
+section {
+    flex: 1;
+    /* Each section takes 100% of the available width by default */
+    max-width: 800px;
+    /* Limit the width to prevent content from becoming too wide */
+    margin-right: 1rem;
+}
+
+aside {
+    flex: 1;
+    /* Each sidebar takes 100% of the available width by default */
+    max-width: 300px;
+    /* Limit the width to prevent content from becoming too wide */
+}
+
+
+/* Apply Flexbox to footer */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+
+/* Responsive Breakpoints */
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav {
+        justify-content: space-around;
+    }
+    main {
+        padding: 0.5rem;
+    }
+    section {
+        flex: 1;
+        /* Each section takes 100% of the available width in smaller screens */
+        max-width: none;
+        /* Remove the max-width limitation for main content */
+        margin-right: 0;
+    }
+    aside {
+        flex: 1;
+        /* Each sidebar takes 100% of the available width in smaller screens */
+        max-width: none;
+        /* Remove the max-width limitation for sidebar */
+        margin-top: 1rem;
+        /* Add some spacing between the main content and sidebar */
+    }
+}
